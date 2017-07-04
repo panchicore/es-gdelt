@@ -1,0 +1,5 @@
+enviroment_variables.sh
+/data/old/*
+/data/realtime/*
+/sirs-data
+*.pyc

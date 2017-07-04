@@ -1,0 +1,216 @@
+delete /gdelt
+
+put /gdelt
+{
+    "template": "gdelt*",
+    "mappings": {
+        "event": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date",
+                    "format": "dateOptionalTime"
+                },
+                "@version": {
+                    "type": "text"
+                },
+                "ActionGeo_ADM1Code": {
+                    "type": "text"
+                },
+                "ActionGeo_ADM2Code": {
+                    "type": "text"
+                },
+                "ActionGeo_CountryCode": {
+                    "type": "text"
+                },
+                "ActionGeo_FeatureID": {
+                    "type": "text"
+                },
+                "ActionGeo_Fullname": {
+                    "type": "text"
+                },
+                "ActionGeo_Lat": {
+                    "type": "double"
+                },
+                "ActionGeo_Long": {
+                    "type": "double"
+                },
+                "ActionGeo_Type": {
+                    "type": "long"
+                },
+                "Actor1Code": {
+                    "type": "text"
+                },
+                "Actor1CountryCode": {
+                    "type": "text"
+                },
+                "Actor1Geo_ADM1Code": {
+                    "type": "text"
+                },
+                "Actor2Geo_ADM1Code": {
+                    "type": "text"
+                },
+                "Actor2Geo_ADM2Code": {
+                    "type": "text"
+                },
+                "Actor1Geo_CountryCode": {
+                    "type": "text"
+                },
+                "Actor1Geo_FeatureID": {
+                    "type": "text"
+                },
+                "Actor1Geo_Fullname": {
+                    "type": "text"
+                },
+                "Actor1Geo_Lat": {
+                    "type": "double"
+                },
+                "Actor1Geo_Long": {
+                    "type": "double"
+                },
+                "Actor1Geo_Type": {
+                    "type": "long"
+                },
+                "Actor1KnownGroupCode": {
+                    "type": "text"
+                },
+                "Actor1Name": {
+                    "type": "text"
+                },
+                "Actor1Religion1Code": {
+                    "type": "text"
+                },
+                "Actor1Religion2Code": {
+                    "type": "text"
+                },
+                "Actor1Type1Code": {
+                    "type": "text"
+                },
+                "Actor1Type2Code": {
+                    "type": "text"
+                },
+                "Actor1Type3Code": {
+                    "type": "text"
+                },
+                "Actor2Code": {
+                    "type": "text"
+                },
+                "Actor2CountryCode": {
+                    "type": "text"
+                },
+                "Actor2EthnicCode": {
+                    "type": "text"
+                },
+                "Actor2Geo_ADM1Code": {
+                    "type": "text"
+                },
+                "Actor2Geo_CountryCode": {
+                    "type": "text"
+                },
+                "Actor2Geo_FeatureID": {
+                    "type": "text"
+                },
+                "Actor2Geo_Fullname": {
+                    "type": "text"
+                },
+                "Actor2Geo_Lat": {
+                    "type": "double"
+                },
+                "Actor2Geo_Long": {
+                    "type": "double"
+                },
+                "Actor2Geo_Type": {
+                    "type": "long"
+                },
+                "Actor2KnownGroupCode": {
+                    "type": "text"
+                },
+                "Actor2Name": {
+                    "type": "text"
+                },
+                "Actor2Religion1Code": {
+                    "type": "text"
+                },
+                "Actor2Religion2Code": {
+                    "type": "text"
+                },
+                "Actor2Type1Code": {
+                    "type": "text"
+                },
+                "Actor2Type2Code": {
+                    "type": "text"
+                },
+                "Actor2Type3Code": {
+                    "type": "text"
+                },
+                "AvgTone": {
+                    "type": "double"
+                },
+                "DateAdded": {
+                    "type": "text"
+                },
+                "Day": {
+                    "type": "text"
+                },
+                "EventBaseCode": {
+                    "type": "text"
+                },
+                "EventCode": {
+                    "type": "text"
+                },
+                "EventRootCode": {
+                    "type": "text"
+                },
+                "FractionDate": {
+                    "type": "double"
+                },
+                "GlobalEventID": {
+                    "type": "long"
+                },
+                "GoldsteinScale": {
+                    "type": "double"
+                },
+                "IsRootEvent": {
+                    "type": "long"
+                },
+                "MonthYear": {
+                    "type": "long"
+                },
+                "NumArticles": {
+                    "type": "long"
+                },
+                "NumMentions": {
+                    "type": "long"
+                },
+                "NumSources": {
+                    "type": "long"
+                },
+                "QuadClass": {
+                    "type": "long"
+                },
+                "SourceURL": {
+                    "type": "text"
+                },
+                "Year": {
+                    "type": "long"
+                },
+                "host": {
+                    "type": "text"
+                },
+                "location": {
+                     "type" : "geo_point"
+                },
+                "message": {
+                    "type": "text"
+                },
+                "path": {
+                    "type": "text"
+                },
+                "port": {
+                    "type": "text"
+                }
+            }
+        }
+    }
+}
+
+get gdelt
