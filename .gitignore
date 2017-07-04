@@ -3,3 +3,5 @@ enviroment_variables.sh
 /data/realtime/*
 /sirs-data
 *.pyc
+*.zip
+*.csv
