@@ -9,3 +9,6 @@
 # GDELT Data Files
 Explain python downloaders here.
 
+# TODO
+- Dockerize
+- Automaticaly create gdelt index and schema
