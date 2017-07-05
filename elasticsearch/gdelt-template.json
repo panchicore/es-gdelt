@@ -1,7 +1,7 @@
 {
     "template": "gdelt*",
     "mappings": {
-        "logs": {
+        "event": {
             "properties": {
                 "@timestamp": {
                     "type": "date",
