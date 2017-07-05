@@ -5,22 +5,22 @@
             "properties": {
                 "@timestamp": {
                     "type": "date",
-                    "format": "dateOptionalTime"
+                    "format": "date_optional_time"
                 },
                 "@version": {
                     "type": "text"
                 },
                 "ActionGeo_ADM1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "ActionGeo_ADM2Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "ActionGeo_CountryCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "ActionGeo_FeatureID": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "ActionGeo_Fullname": {
                     "type": "text"
@@ -32,25 +32,25 @@
                     "type": "double"
                 },
                 "ActionGeo_Type": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "Actor1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1CountryCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Geo_ADM1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Geo_ADM2Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Geo_CountryCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Geo_FeatureID": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Geo_Fullname": {
                     "type": "text"
@@ -62,46 +62,46 @@
                     "type": "double"
                 },
                 "Actor1Geo_Type": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "Actor1KnownGroupCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Name": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Religion1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Religion2Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Type1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Type2Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor1Type3Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2CountryCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2EthnicCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Geo_ADM1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Geo_CountryCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Geo_FeatureID": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Geo_Fullname": {
                     "type": "text"
@@ -113,46 +113,48 @@
                     "type": "double"
                 },
                 "Actor2Geo_Type": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "Actor2KnownGroupCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Name": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Religion1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Religion2Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Type1Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Type2Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "Actor2Type3Code": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "AvgTone": {
                     "type": "double"
                 },
                 "DateAdded": {
-                    "type": "text"
+                    "type": "date",
+                    "format": "yyyyMMddHHmmss"
                 },
                 "Day": {
-                    "type": "text"
+                    "type": "date",
+                    "format": "yyyyMMdd"
                 },
                 "EventBaseCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "EventCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "EventRootCode": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "FractionDate": {
                     "type": "double"
@@ -164,31 +166,33 @@
                     "type": "double"
                 },
                 "IsRootEvent": {
-                    "type": "long"
+                    "type": "boolean"
                 },
                 "MonthYear": {
-                    "type": "long"
+                    "type": "date",
+                    "format": "yyyyMM"
                 },
                 "NumArticles": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "NumMentions": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "NumSources": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "QuadClass": {
-                    "type": "long"
+                    "type": "integer"
                 },
                 "SourceURL": {
                     "type": "text"
                 },
                 "Year": {
-                    "type": "long"
+                    "type": "date",
+                    "format": "yyyy"
                 },
                 "host": {
-                    "type": "text"
+                    "type": "keyword"
                 },
                 "location": {
                      "type" : "geo_point"
