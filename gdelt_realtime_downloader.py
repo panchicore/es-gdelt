@@ -9,12 +9,19 @@ ZIP_EXTRACT_PATH = os.path.join(BASE_PATH, "data", "realtime")
 
 
 def slack(message):
-    data = {
-        "username": "gdelt-luis-machine",
-        "text": message,
-        "icon_emoji": ":google:"
-    }
-    requests.post("https://hooks.slack.com/services/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", json=data)
+    """
+    Notify activities to slack channels.
+    Set SLACK_NOTIFICATIONS_ENABLED and SLACK_NOTIFICATIONS_ENABLED env vars.
+    :param message: 
+    :return: 
+    """
+    if os.environ.get("SLACK_NOTIFICATIONS_ENABLED", None):
+        data = {
+            "username": "gdelt-cron",
+            "text": message,
+            "icon_emoji": ":google:"
+        }
+        requests.post(os.environ.get("SLACK_NOTIFICATIONS_URL"), json=data)
 
 
 def download_file(url):
