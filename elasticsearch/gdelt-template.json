@@ -1,5 +1,5 @@
 {
-    "template": "gdelt*",
+    "template": "gdelt",
     "mappings": {
         "event": {
             "properties": {
@@ -160,7 +160,7 @@
                     "type": "double"
                 },
                 "GlobalEventID": {
-                    "type": "long"
+                    "type": "text"
                 },
                 "GoldsteinScale": {
                     "type": "double"
@@ -207,6 +207,29 @@
                     "type": "text"
                 }
             }
+        },
+        "gkg": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date",
+                    "format": "date_optional_time"
+                },
+                "Counts21Objects.location": {
+                    "type" : "geo_point"
+                },
+                "EnhancedLocationsObjects.location": {
+                    "type" : "geo_point"
+                }
+            }
+        },
+        "mention": {
+            "properties": {
+                "@timestamp": {
+                    "type": "date",
+                    "format": "date_optional_time"
+                }
+            }
         }
+
     }
 }
