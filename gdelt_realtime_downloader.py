@@ -60,47 +60,54 @@ def get(_from_date=None):
     :param _from_date:
     :return:
     """
-    if not _from_date:
-        res = requests.get("http://data.gdeltproject.org/gdeltv2/lastupdate.txt")
-        url = None
-        gkg_url = None
-        mentions_url = None
 
-        for line in res.content.split("\n"):
-            if not line:
-                continue
+    feeds = [
+        "http://data.gdeltproject.org/gdeltv2/lastupdate.txt",
+        "http://data.gdeltproject.org/gdeltv2/lastupdate-translation.txt"
+    ]
 
-            if line.count(".export.CSV.zip") > 0:
-                url = line.split(" ")[2]
-            if line.count(".gkg.csv.zip") > 0:
-                gkg_url = line.split(" ")[2]
-            if line.count(".mentions.CSV.zip") > 0:
-                mentions_url = line.split(" ")[2]
+    for feed in feeds:
+        if not _from_date:
+            res = requests.get(feed)
+            url = None
+            gkg_url = None
+            mentions_url = None
+
+            for line in res.content.split("\n"):
+                if not line:
+                    continue
+
+                if line.count(".export.CSV.zip") > 0:
+                    url = line.split(" ")[2]
+                if line.count(".gkg.csv.zip") > 0:
+                    gkg_url = line.split(" ")[2]
+                if line.count(".mentions.CSV.zip") > 0:
+                    mentions_url = line.split(" ")[2]
 
 
-        if not url or not gkg_url:
-            return
-    else:
-        url = "http://data.gdeltproject.org/gdeltv2/{0}.export.CSV.zip".format(_from_date)
-        mentions_url = "http://data.gdeltproject.org/gdeltv2/{0}.mentions.CSV.zip".format(_from_date)
-        gkg_url = "http://data.gdeltproject.org/gdeltv2/{0}.gkg.csv.zip".format(_from_date)
+            if not url or not gkg_url:
+                return
+        else:
+            url = "http://data.gdeltproject.org/gdeltv2/{0}.export.CSV.zip".format(_from_date)
+            mentions_url = "http://data.gdeltproject.org/gdeltv2/{0}.mentions.CSV.zip".format(_from_date)
+            gkg_url = "http://data.gdeltproject.org/gdeltv2/{0}.gkg.csv.zip".format(_from_date)
 
-    filename = download_file(url)
-    filename_gkg = download_file(gkg_url)
-    filename_mentions = download_file(mentions_url)
-    if filename:
-        unzip(filename)
-        os.remove(filename)
+        filename = download_file(url)
+        filename_gkg = download_file(gkg_url)
+        filename_mentions = download_file(mentions_url)
+        if filename:
+            unzip(filename)
+            os.remove(filename)
 
-        unzip(filename_gkg)
-        os.remove(filename_gkg)
+            unzip(filename_gkg)
+            os.remove(filename_gkg)
 
-        unzip(filename_mentions)
-        os.remove(filename_mentions)
+            unzip(filename_mentions)
+            os.remove(filename_mentions)
 
-        slack("downloaded {}".format(filename))
-        slack("downloaded {}".format(filename_gkg))
-        slack("downloaded {}".format(filename_mentions))
+            slack("downloaded {}".format(filename))
+            slack("downloaded {}".format(filename_gkg))
+            slack("downloaded {}".format(filename_mentions))
 
 
 if __name__ == "__main__":
