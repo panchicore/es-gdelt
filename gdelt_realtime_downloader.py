@@ -88,6 +88,9 @@ def get(_from_date=None):
             if not url or not gkg_url:
                 return
         else:
+            if feed.count("translation") > 0:
+                _from_date += ".translation"
+
             url = "http://data.gdeltproject.org/gdeltv2/{0}.export.CSV.zip".format(_from_date)
             mentions_url = "http://data.gdeltproject.org/gdeltv2/{0}.mentions.CSV.zip".format(_from_date)
             gkg_url = "http://data.gdeltproject.org/gdeltv2/{0}.gkg.csv.zip".format(_from_date)
