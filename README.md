@@ -14,7 +14,7 @@ Explain python downloaders here.
 - Automaticaly create gdelt index and schema
 
 # Run it
-Make sure you have a healthy elasticsearch instance running.
+Make sure you have a healthy elasticsearch node ready.
 
 1. Install python requirements with `pip install -r config/requirements.txt`
 2. Set the env vars: https://github.com/panchicore/es-gdelt/blob/master/config/enviroment_variables.sample.sh, use `source enviroment_variables.sample.sh`
