@@ -11,5 +11,4 @@ Explain python downloaders here.
 # TODO
 - ~~Process KGK~~
 - ~~Process Mentions~~
-- Dockerize
 - Automaticaly create gdelt index and schema
